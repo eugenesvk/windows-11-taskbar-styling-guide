@@ -1,0 +1,65 @@
+# declare var: key = value
+# use     var: key:=$value
+# Margin=←,↑,→,↓
+styleConstants:
+  - ''
+controlStyles:
+  - target: Taskbar.TaskbarFrame > Grid#RootGrid > Taskbar.TaskbarBackground > Grid > Rectangle#BackgroundFill
+    styles:
+      - Fill=Transparent
+  - target: Rectangle#BackgroundStroke
+    styles:
+      - Fill=Transparent
+  - target: Taskbar.TaskListLabeledButtonPanel@RunningIndicatorStates > Rectangle#RunningIndicator
+    styles:
+      - Fill=#8f8f8f
+      - Fill@ActiveRunningIndicator=#fef9f0
+      - Width=0
+      - Height=0
+      - Margin=0,0,0,0
+      - Width@ActiveRunningIndicator=32
+      - Height@ActiveRunningIndicator=2
+      - Margin@ActiveRunningIndicator=0,-2,0,0
+  - target: Taskbar.TaskListLabeledButtonPanel@RunningIndicatorStates > muxc:ProgressBar#ProgressIndicator
+    styles:
+      - VerticalAlignment=0
+  - target: Rectangle#RunningIndicator
+    styles:
+      - VerticalAlignment=0
+  - target: Border#ProgressBarRoot
+    styles:
+      - VerticalAlignment=0
+  - target: Rectangle#IndeterminateProgressBarIndicator
+    styles:
+      - VerticalAlignment=0
+  - target: Rectangle#IndeterminateProgressBarIndicator2
+    styles:
+      - VerticalAlignment=0
+  - target: Taskbar.TaskListLabeledButtonPanel
+    styles:
+      - Padding=2,0,2,0
+      - VerticalAlignment=2
+  - target: Taskbar.ExperienceToggleButton#LaunchListButton[AutomationProperties.AutomationId=StartButton]
+    styles:
+      - Visibility=Collapsed
+  - target: SystemTray.Stack#ShowDesktopStack
+    styles:
+      - Width=1
+  - target: Windows.UI.Xaml.Shapes.Rectangle#ShowDesktopPipe
+    styles:
+      - HorizontalAlignment=0
+  - target: SystemTray.NotificationAreaIcons#NotificationAreaIcons > ItemsPresenter > StackPanel > ContentPresenter > SystemTray.NotifyIconView#NotifyItemIcon > Grid#ContainerGrid > ContentPresenter#ContentPresenter > Grid#ContentGrid > SystemTray.ImageIconContent > Grid#ContainerGrid > Image
+    styles:
+      - Width=20
+      - Height=20
+  - target: WrapGrid > ContentPresenter > SystemTray.NotifyIconView > Grid#ContainerGrid > ContentPresenter#ContentPresenter > Grid#ContentGrid > SystemTray.ImageIconContent > Grid#ContainerGrid > Image
+    styles:
+      - Width=20
+      - Height=20
+  - target: Taskbar.TaskListLabeledButtonPanel@RunningIndicatorStates > Image#Icon
+    styles:
+      - Width@ActiveRunningIndicator=30
+      - Height@ActiveRunningIndicator=30
+      - Width@NoRunningIndicator=26
+      - Height@NoRunningIndicator=26
+      - Margin@NoRunningIndicator=0,6,0,0
